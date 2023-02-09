@@ -1,0 +1,50 @@
+<div>
+    <form class="container" [formGroup]="flightForm" (ngSubmit)="onFormSubmit()">
+        <mat-form-field class="field">
+            <mat-label>From</mat-label>
+            <input 
+                [formControl]="departure"
+                matInput 
+                placeholder="Warsaw"
+            >
+        </mat-form-field>
+
+        <mat-form-field class="field">
+            <mat-label>To</mat-label>
+            <input 
+                matInput 
+                placeholder="London"
+                [formControl]="arrival"
+            >
+        </mat-form-field>
+
+        <mat-form-field class="field">
+            <mat-label>Travel time</mat-label>
+            <mat-date-range-input 
+                [formGroup]="range"
+                [rangePicker]="picker"
+            >
+                <input 
+                    [formControl]="startDate" 
+                    matStartDate 
+                    placeholder="Start date"
+                />
+                <input 
+                    [formControl]="endDate" 
+                    matEndDate 
+                    placeholder="End date"
+                />
+            </mat-date-range-input>
+            <mat-hint>MM/DD/YYYY - MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field>
+        
+        <button
+            mat-fab
+            class="field center btn"
+            type="submit"
+            [disabled]="flightForm.invalid"
+        >Fly</button>
+    </form>
+</div>

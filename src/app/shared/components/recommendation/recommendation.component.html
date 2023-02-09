@@ -1,0 +1,12 @@
+<div class="stopper">
+    <div class="container">
+        <div class="item" *ngFor="let card of cards">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>{{ card.title }}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content><p>{{ card.content }}</p></mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

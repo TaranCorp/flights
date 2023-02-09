@@ -1,0 +1,29 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(12, 1fr) / repeat(12, 1fr);
+}
+
+.header {
+    grid-column: span 7;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 1.6em;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #FFD700;
+}
+
+.navigation {
+    grid-area: 1 / 1 / span 12 / span 3;
+}
+
+.main {
+    grid-column-end: span 7;
+}
+
+.recommendation {
+    grid-row-start: 4;
+    grid-column-end: span 7;
+}

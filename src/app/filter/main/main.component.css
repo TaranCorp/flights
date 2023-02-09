@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 1rem 0;
+}
+
+.field {
+    padding: 0 0.5rem;
+}
+
+.center {
+    align-self: flex-start;
+}
